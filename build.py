@@ -3,6 +3,7 @@
 """ CETech engine build script
 """
 
+
 ###########
 # IMPORTS #
 ################################################################################
@@ -31,7 +32,7 @@ BIN_DIR = os.path.abspath(os.path.join(ROOT_DIR, 'bin'))
 EXTERNAL_BUILD_DIR = os.path.abspath(
     os.path.join(ROOT_DIR, 'externals', 'build'))
 
-DEFAULT_BUILD = "%s%s" % (OS_NAME, OS_ARCH)
+DEFAULT_BUILD = f"{OS_NAME}{OS_ARCH}"
 
 ##########
 # CONFIG #
@@ -54,12 +55,7 @@ PLATFORMS = {
 
 
 def make_make(config, platform_, debug):
-    if not debug:
-        cmds = ['make']
-    else:
-        cmds = ['make']
-
-    return cmds
+    return ['make']
 
 
 PLATFORMS_MAKE = {
